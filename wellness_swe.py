@@ -1,3 +1,34 @@
+import sqlite3
+
+
+# Run once only
+# Create a database or connect to one
+conn = sqlite3.connect('wellness_swe.db')
+# Create cursor
+c = conn.cursor()
+
+##### Create table #####
+##only have to do once 
+
+c.execute("""CREATE TABLE wellness_swe_DB (
+        datetime text,
+        sleep_hours float,
+        rested_yes_no text,
+        exercise_hours float,
+        water_cups float,
+        conclusion1_production float,
+        conclusion2_feeling text,
+        conclusion3_additional text
+        )""")
+
+#####
+
+
+# Commit changes
+conn.commit()
+#Close connection
+conn.close()
+
 # Sleep (hrs)
 while True:
     sleep_hr = input('Enter hours of sleep last night: ')
@@ -36,7 +67,7 @@ while True:
         print('Please enter a decimal number ')
 
 # Conclusions
+production = input('How productive were you today (1-10)? ')
 feelings = input('How did you feel today? ')
-production = input('How productive were you today? ')
 additional_notes = input('Enter additional notes: ')
 

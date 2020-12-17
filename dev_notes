@@ -1,0 +1,34 @@
+12/15/2020 Start of wellness_swe 
+
+- figuring out format for project
+    - simple:
+        - daily use at the end of the day
+        - questions asked in a row, answer
+        - analysis once every week
+            - IDEA: use zader sentiment analysizer to get sentiment scores of conclusions
+
+- adding initial data keys
+    - hours of sleep
+        - user input handling
+    - rested (y/n)
+        - user input handling
+    - hours of exercise 
+        - user input handling
+    - amount (cups) of water
+        - user input handling
+    
+    - conclusions
+        - How did you feel today?
+        - How productive were you today? (scale 1-10)
+        - Additional notes
+        
+
+
+12/16/2020 
+
+- created github
+    - https://github.com/slimsprojects/wellness_swe
+
+
+
+

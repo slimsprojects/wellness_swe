@@ -1,3 +1,11 @@
+TO-DO:
+ - make database and table
+ - query through data
+ - analyze data
+ - present findings 
+ - ui/ux
+
+
 12/15/2020 Start of wellness_swe 
 
 - figuring out format for project
@@ -30,5 +38,17 @@
     - https://github.com/slimsprojects/wellness_swe
 
 
+- where to store data?
+    - csv?
+    - database:
+        - sqlite3 db 
+            - wellness_swe_DB:
+            - table:
+                - date and time (auto?)
+                - sleep
+                - rested 
+                - exercise 
+                - water
 
+- what kind of analysis on data?
 

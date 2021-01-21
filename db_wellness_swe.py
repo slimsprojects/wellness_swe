@@ -1,8 +1,10 @@
 import sqlite3
 from sqlite3 import Error
 
-
 # CREATE functions
+def add_entry(con):
+    cursorObj = con.cursor()
+    cursorObj.execute(""" """)
 
 
 # READ functions
@@ -60,14 +62,23 @@ def update_entry(con, id):
             print('Please select a valid column')
     update_value = input('Enter updated value: ')
     cursorObj = con.cursor()
-    cursorObj.execute("""UPDATE wellness_swe_DB SET """ + select_col + """=""" + update_value + """ WHERE oid =""" + id)
+    cursorObj.execute("""UPDATE wellness_swe_DB SET """ + select_col + """ = """ + update_value + """ WHERE oid = """ + id)
     print('Database Updated')
 
 # DELETE functions 
 def delete_all(con):
-    cursorObj = con.cursor()
-    cursorObj.execute("""DELETE from wellness_swe_DB""")
+    delete_confirm = input('CAUTION: Delete all entries? yes/no ')
+    if delete_confirm == 'yes': 
+        cursorObj = con.cursor()
+        cursorObj.execute("""DELETE from wellness_swe_DB""")
+        print('Database is now empty ')
+    else:
+        return
 
+def delete_row(con, id):
+    cursorObj = con.cursor()
+    cursorObj.execute("""DELETE FROM wellness_swe_DB WHERE oid = """ + id)
+    print('Entry Deleted ')
 
 def check_exist_db(con, id):
     db_id = id
@@ -123,7 +134,14 @@ def main():
                     print('ID not in Database')
                     break
         elif menu_item == '4':
-            break
+            while True:
+                delete_id = input('Enter ID to delete: ')
+                if check_exist_db(con, delete_id):
+                    delete_row(con, delete_id)
+                    break
+                else:
+                    print('ID not in Database')
+                    break
         elif menu_item == '5':
             break
         else:

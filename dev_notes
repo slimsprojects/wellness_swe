@@ -1,7 +1,11 @@
-TO-DO:
- - make database and table
- - query through data
- - analyze data
+TO-DO (MAIN):
+ * make database and table
+ * C
+ * R 
+ * U 
+ * D 
+ - display data 
+ - analyze data ML
  - present findings 
  - ui/ux
 
@@ -52,3 +56,64 @@ TO-DO:
 
 - what kind of analysis on data?
 
+
+
+12/17/2020
+
+- moved db SQL code to its own script (db_wellness_swe.py) 
+
+- IDEA: use machine learning to predict and suggest
+    - based off hydration levels, amount of sleep from previous night, too much exercise
+    - suggestions: extra hydration, naps, no exercise, fruits/ snacks
+
+- wrote sqlite insert and fetch_all, delete_all functions
+
+TO DO:
+- add user menu for db_wellness_swe.py 
+- allow edit to entries 
+- make backup
+
+
+12/18/2020
+
+- database CRUD menu 
+    - Add
+        - entry input by category 
+            - entry menu
+            - how to not interfere/ work seemlessly with main wellness_swe.py script
+            - quick and easy to use
+    * View
+        - view all: fetch_all
+        - view selected entry:
+            - by id 
+    * Edit 
+        - edit entry
+        - How? 
+            - enter id to edit
+            - check if id exist in db 
+            - ask which value to update
+            - update value
+    - Delete
+        - delete all (caution)
+        - delete selected 
+
+- check if exist function
+
+IDEA:
+ - query and view data
+        - swe per day
+            - average per day
+        - swe relation to conclusions
+
+- (?) in db_wellness_swe.py #CREATE functions 
+    - run main script wellness_swe.py 
+
+
+
+12/23/20
+
+- create functions
+    ideas:
+    - add entry menu (select what to add)
+        - grab datetime 
+    - 

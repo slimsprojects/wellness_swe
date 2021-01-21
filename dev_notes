@@ -1,9 +1,10 @@
 TO-DO (MAIN):
  * make database and table
  * C
- - R 
+ * R 
  * U 
- - D 
+ * D 
+ - display data 
  - analyze data ML
  - present findings 
  - ui/ux
@@ -77,9 +78,11 @@ TO DO:
 
 - database CRUD menu 
     - Add
-        - add column
-        - add row 
-    - View
+        - entry input by category 
+            - entry menu
+            - how to not interfere/ work seemlessly with main wellness_swe.py script
+            - quick and easy to use
+    * View
         - view all: fetch_all
         - view selected entry:
             - by id 
@@ -101,4 +104,16 @@ IDEA:
         - swe per day
             - average per day
         - swe relation to conclusions
-        - 
+
+- (?) in db_wellness_swe.py #CREATE functions 
+    - run main script wellness_swe.py 
+
+
+
+12/23/20
+
+- create functions
+    ideas:
+    - add entry menu (select what to add)
+        - grab datetime 
+    - 
